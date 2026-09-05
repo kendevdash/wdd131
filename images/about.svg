@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Person working at a laptop">
+  <rect width="600" height="400" fill="#e2eef0"/>
+  <circle cx="300" cy="150" r="90" fill="#0a4a56"/>
+  <circle cx="300" cy="128" r="34" fill="#f4f9fa"/>
+  <path d="M246 196c0-30 24-52 54-52s54 22 54 52z" fill="#f4f9fa"/>
+  <rect x="196" y="250" width="208" height="120" rx="10" fill="#062f38"/>
+  <rect x="214" y="268" width="172" height="84" rx="6" fill="#7fc6d1"/>
+  <rect x="176" y="366" width="248" height="16" rx="8" fill="#0a4a56"/>
+  <rect x="232" y="286" width="136" height="10" rx="5" fill="#062f38"/>
+  <rect x="232" y="306" width="104" height="10" rx="5" fill="#062f38"/>
+  <rect x="232" y="326" width="120" height="10" rx="5" fill="#062f38"/>
+</svg>

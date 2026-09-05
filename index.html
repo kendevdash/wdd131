@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 &ndash; Dynamic Web Fundamentals &ndash; Ken Dash</title>
+  <meta name="description" content="WDD 131 &ndash; Dynamic Web Fundamentals course home page for Ken Dash. A student landing page built with semantic HTML, CSS Flexbox and Grid, Google Fonts, and JavaScript that shows the current year and the date the page was last modified.">
+  <meta name="author" content="Ken Dash">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+  <header>
+    <span id="course-title">WDD 131 &ndash; Dynamic Web Fundamentals</span>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&amp;id=p7#p7" target="_blank" rel="noopener">Scripture</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Ken Dash</h1>
+
+    <section class="card">
+      <h2>About Me</h2>
+      <img src="images/about.svg" alt="Illustration of a person at a laptop learning to code" width="600" height="400">
+      <p>
+        I am a student in the BYU&ndash;Pathway Worldwide online program, working toward a
+        certificate in web and software development. I enjoy solving problems, building things
+        that other people can use, and learning a little more every day. Outside of class I
+        like hiking, reading, and spending time with family.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>My Goals for WDD 131</h2>
+      <img src="images/goals.svg" alt="Illustration of a target with an arrow in the center" width="600" height="400">
+      <p>
+        In this course I want to become comfortable writing clean, semantic HTML, styling
+        pages with modern CSS layout tools like Flexbox and Grid, and using JavaScript to make
+        pages dynamic and responsive. My goal is to finish the semester able to plan, build,
+        and deploy a small website from start to finish on my own.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span> Ken Dash &bull; Utah, USA
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

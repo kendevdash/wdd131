@@ -1,0 +1,175 @@
+/* ==========================================================================
+   WDD 131 – Home Page – base.css
+   ========================================================================== */
+
+:root {
+  --bg: #eef2f3;
+  --surface: #ffffff;
+  --ink: #17262b;
+  --ink-soft: #3d5157;
+  --brand: #0a4a56;
+  --brand-deep: #062f38;
+  --line: #d5dee0;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+
+  --radius: 10px;
+  --shadow: 0 2px 10px rgba(6, 47, 56, 0.10);
+  --maxw: 960px;
+
+  --font: "Poppins", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Header + navigation
+   -------------------------------------------------------------------------- */
+
+header {
+  background-color: var(--brand-deep);
+  padding: var(--space-3) var(--space-2);
+}
+
+#course-title {
+  display: block;
+  text-align: center;
+  color: var(--surface);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-3);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1) var(--space-2);
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  color: var(--surface);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  /* transparent border reserved so the hover state never shifts layout */
+  border-bottom: 3px solid transparent;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: rgba(255, 255, 255, 0.14);
+  border-bottom-color: var(--surface);
+}
+
+/* --------------------------------------------------------------------------
+   Main – centered, limited width, card grid
+   -------------------------------------------------------------------------- */
+
+main {
+  max-width: var(--maxw);
+  margin: var(--space-5) auto;
+  padding: 0 var(--space-2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+main h1 {
+  grid-column: 1 / -1;
+  margin: 0;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-3);
+}
+
+.card h2 {
+  margin: 0 0 var(--space-2);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: var(--space-2);
+}
+
+.card p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+footer {
+  background-color: var(--brand-deep);
+  color: var(--surface);
+  text-align: center;
+  padding: var(--space-4) var(--space-2);
+}
+
+footer p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   Focus visibility (accessibility)
+   -------------------------------------------------------------------------- */
+
+a:focus-visible {
+  outline: 3px solid #ffd166;
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive – stack the cards on narrow screens
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  main {
+    grid-template-columns: 1fr;
+    margin: var(--space-4) auto;
+  }
+
+  #course-title {
+    font-size: 1.25rem;
+  }
+}

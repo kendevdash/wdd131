@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Arrow hitting the center of a target">
+  <rect width="600" height="400" fill="#e2eef0"/>
+  <circle cx="300" cy="200" r="140" fill="#0a4a56"/>
+  <circle cx="300" cy="200" r="102" fill="#f4f9fa"/>
+  <circle cx="300" cy="200" r="66" fill="#0a4a56"/>
+  <circle cx="300" cy="200" r="30" fill="#f4f9fa"/>
+  <circle cx="300" cy="200" r="12" fill="#062f38"/>
+  <line x1="360" y1="140" x2="470" y2="70" stroke="#062f38" stroke-width="12" stroke-linecap="round"/>
+  <path d="M470 70l-34 6 28 22z" fill="#062f38"/>
+  <path d="M300 200l60-60" stroke="#ffd166" stroke-width="10" stroke-linecap="round"/>
+</svg>
