@@ -1,0 +1,195 @@
+/* ==========================================================================
+   WDD 131 – Temple Album – temples.css
+   Mobile-first base styles. Larger-view overrides live in temples-large.css.
+   ========================================================================== */
+
+:root {
+  --bg: #eef2f3;
+  --surface: #ffffff;
+  --ink: #17262b;
+  --ink-soft: #3d5157;
+  --brand: #0a4a56;
+  --brand-deep: #062f38;
+  --line: #d5dee0;
+  --accent: #f2b705;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+
+  --radius: 10px;
+  --shadow: 0 2px 10px rgba(6, 47, 56, 0.10);
+  --maxw: 64rem;
+
+  --font: "Poppins", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Header + navigation (mobile: hamburger)
+   -------------------------------------------------------------------------- */
+
+header {
+  background-color: var(--brand-deep);
+  color: var(--surface);
+}
+
+.site-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2);
+}
+
+.site-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.menu-button {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--surface);
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 8px;
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+}
+
+.menu-button:hover,
+.menu-button:focus-visible {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+/* nav uses Flexbox; hidden by default on small screens */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+}
+
+.nav-list.open {
+  display: flex;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.85rem var(--space-2);
+  color: var(--surface);
+  text-decoration: none;
+  font-weight: 600;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  /* reserved border so the hover state never shifts the layout */
+  border-left: 4px solid transparent;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  background-color: rgba(255, 255, 255, 0.14);
+  border-left-color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Main – centered, limited width
+   -------------------------------------------------------------------------- */
+
+main {
+  max-width: var(--maxw);
+  margin: var(--space-4) auto;
+  padding: 0 var(--space-2);
+}
+
+h1 {
+  margin: 0 0 var(--space-3);
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* --------------------------------------------------------------------------
+   Gallery – CSS Grid, one column on mobile
+   -------------------------------------------------------------------------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+figure {
+  margin: 0;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+figure img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+figcaption {
+  padding: 0.75rem var(--space-2);
+  text-align: center;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+/* --------------------------------------------------------------------------
+   Footer – matches the home page
+   -------------------------------------------------------------------------- */
+
+footer {
+  background-color: var(--brand-deep);
+  color: var(--surface);
+  text-align: center;
+  padding: var(--space-4) var(--space-2);
+}
+
+footer p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility helpers
+   -------------------------------------------------------------------------- */
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

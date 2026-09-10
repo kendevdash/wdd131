@@ -1,0 +1,69 @@
+/* ==========================================================================
+   WDD 131 – Temple Album – temples-large.css
+   Larger-view overrides only. Everything is inside the media query so the
+   mobile-first temples.css stays in control on small screens.
+   ========================================================================== */
+
+@media (min-width: 40rem) {
+
+  /* Header becomes a single row; the hamburger is not needed */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .site-bar {
+    padding: 0;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  /* nav items always visible, laid out in a Flex row */
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-1);
+  }
+
+  .nav-list a {
+    border-top: none;
+    border-left: none;
+    border-radius: 6px;
+    /* reserved border so hover never changes the box size */
+    border-bottom: 3px solid transparent;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus-visible {
+    border-left-color: transparent;
+    border-bottom-color: var(--surface);
+  }
+
+  /* Gallery expands to a responsive multi-column grid */
+  main {
+    margin-top: var(--space-4);
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--space-4);
+  }
+
+  figure img {
+    height: 14rem;
+    transition: transform 300ms ease;
+  }
+
+  figure:hover img {
+    transform: scale(1.05);
+  }
+}

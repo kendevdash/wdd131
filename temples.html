@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temple Album &ndash; WDD 131 &ndash; Ken Dash</title>
+  <meta name="description" content="A responsive picture album of temples built for WDD 131 with semantic HTML, CSS Flexbox and Grid, a mobile hamburger menu, and JavaScript for the dynamic footer.">
+  <meta name="author" content="Ken Dash">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <!-- Mobile-first: base styles first, larger-view overrides second -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="site-bar">
+      <span class="site-name">Temple Album</span>
+      <button id="menu-button" class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">&#9776;</button>
+    </div>
+    <nav>
+      <ul id="primary-nav" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#gallery">Old</a></li>
+        <li><a href="#gallery">New</a></li>
+        <li><a href="#gallery">Large</a></li>
+        <li><a href="#gallery">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Temple Album</h1>
+
+    <div class="gallery" id="gallery">
+      <figure>
+        <img src="images/temple.svg" alt="Salt Lake Temple" width="800" height="600">
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.svg" alt="Rome Italy Temple" width="800" height="600" loading="lazy">
+        <figcaption>Rome Italy Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.svg" alt="Paris France Temple" width="800" height="600" loading="lazy">
+        <figcaption>Paris France Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.svg" alt="Laie Hawaii Temple" width="800" height="600" loading="lazy">
+        <figcaption>Laie Hawaii Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.svg" alt="Mexico City Mexico Temple" width="800" height="600" loading="lazy">
+        <figcaption>Mexico City Mexico Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.svg" alt="Provo City Center Temple" width="800" height="600" loading="lazy">
+        <figcaption>Provo City Center Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.svg" alt="Washington D.C. Temple" width="800" height="600" loading="lazy">
+        <figcaption>Washington D.C. Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.svg" alt="São Paulo Brazil Temple" width="800" height="600" loading="lazy">
+        <figcaption>São Paulo Brazil Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.svg" alt="Cardston Alberta Temple" width="800" height="600" loading="lazy">
+        <figcaption>Cardston Alberta Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.svg" alt="Kirtland Ohio Temple" width="800" height="600" loading="lazy">
+        <figcaption>Kirtland Ohio Temple</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Ken Dash &bull; Utah, USA</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
