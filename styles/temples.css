@@ -189,7 +189,7 @@ footer p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
+  nav a {
+    transition: none;
   }
 }
