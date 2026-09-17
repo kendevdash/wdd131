@@ -9,7 +9,7 @@
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Mulish', sans-serif;
   --radius: 10px;
-  --shadow: 0 8px 24px rgba(0, 32, 63, 0.15);
+  --shadow: 0 8px 24px #00203f26;
   --spacing-sm: 0.75rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 3rem;
@@ -80,7 +80,7 @@ img {
   position: absolute;
   inset: auto 0 0 0;
   padding: var(--spacing-md);
-  background: linear-gradient(to top, rgba(0, 32, 63, 0.85), transparent);
+  background: linear-gradient(to top, #00203fd9, #00203f00);
   color: var(--color-surface);
 }
 
