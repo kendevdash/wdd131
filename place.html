@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iceland &ndash; Country Page &ndash; WDD 131 &ndash; Ken Dash</title>
+  <meta name="description" content="A traveler's guide to Iceland: why to visit, current weather and wind chill, and the top natural attractions to see, from Skógafoss to the Blue Lagoon.">
+  <meta name="author" content="Ken Dash">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">WDD 131 &middot; Country Page</p>
+    <p class="brand">Wander<span>far</span></p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 700px)" srcset="images/country-large.webp">
+        <img
+          src="images/country-small.webp"
+          alt="Skógafoss waterfall cascading over green cliffs in southern Iceland"
+          width="700" height="306"
+          loading="eager">
+      </picture>
+      <div class="hero-caption">
+        <h1>Iceland</h1>
+        <p>The Land of Fire and Ice</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>Why Visit Iceland?</h2>
+      <p>
+        Iceland is a small island nation where glaciers meet active volcanoes and the
+        Northern Lights dance over black-sand beaches. Just a few hours from major European
+        and North American hubs, it offers geothermal lagoons, thundering waterfalls, and
+        some of the most dramatic, untouched landscapes on Earth. Whether you're chasing
+        the aurora in winter or hiking the midnight sun in summer, Iceland rewards visitors
+        with scenery unlike anywhere else in the world.
+      </p>
+    </section>
+
+    <section class="weather" aria-labelledby="weather-heading">
+      <h2 id="weather-heading">Weather</h2>
+      <div class="weather-card">
+        <img
+          src="images/weather.svg"
+          alt="Partly cloudy sky icon"
+          class="weather-icon-mobile"
+          width="64" height="64">
+        <div class="weather-details">
+          <p class="condition">Partly Cloudy &middot; Reykjav&iacute;k</p>
+          <ul class="weather-stats">
+            <li>
+              <span class="label">Temperature</span>
+              <span class="value" id="temperature">8&deg;C</span>
+            </li>
+            <li>
+              <span class="label">Wind Speed</span>
+              <span class="value" id="wind-speed">18 km/h</span>
+            </li>
+            <li>
+              <span class="label">Wind Chill</span>
+              <span class="value" id="wind-chill">--</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="attractions">
+      <h2>Top Things to See</h2>
+      <div class="card-grid">
+        <article class="card">
+          <img
+            src="images/attraction-aurora.webp"
+            alt="Green aurora borealis glowing over Þingvellir National Park, Iceland"
+            width="700" height="500"
+            loading="lazy">
+          <h3>Northern Lights</h3>
+          <p>Best viewed between September and April, away from city lights.</p>
+        </article>
+        <article class="card">
+          <img
+            src="images/attraction-lagoon.webp"
+            alt="Bathers in the milky-blue geothermal waters of the Blue Lagoon"
+            width="700" height="500"
+            loading="lazy">
+          <h3>Blue Lagoon</h3>
+          <p>A geothermal spa near Reykjav&iacute;k, warmed by volcanic activity year-round.</p>
+        </article>
+        <article class="card">
+          <img
+            src="images/attraction-glacier.webp"
+            alt="Sunlight glowing through the blue ice of a glacier ice cave"
+            width="700" height="500"
+            loading="lazy">
+          <h3>Glacier Ice Caves</h3>
+          <p>Guided tours reveal electric-blue caverns beneath Vatnaj&ouml;kull glacier.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Wanderfar Travel Guide &mdash; Iceland</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+    <p class="credits">
+      Photos via Wikimedia Commons, cropped and resized:
+      <a href="https://commons.wikimedia.org/wiki/File:Skogafoss_waterfall_-_Iceland_-_Landscape_photography_(34692750741).jpg">Skógafoss</a> by Giuseppe Milo (<a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>) &middot;
+      <a href="https://commons.wikimedia.org/wiki/File:Iceland_Aurora_1.jpg">Aurora</a> by Carl Young (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>) &middot;
+      <a href="https://commons.wikimedia.org/wiki/File:Iceland_Blue_Lagoon.jpg">Blue Lagoon</a> by Sarah1990 (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>) &middot;
+      <a href="https://commons.wikimedia.org/wiki/File:Natural_glacier_ice_cave_(16281965008).jpg">Ice cave</a> by sergejf (<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>)
+    </p>
+  </footer>
+</body>
+</html>
