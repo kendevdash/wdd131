@@ -2,22 +2,66 @@
 //  WDD 131 – Filtered Temple Album – filtered-temples.js
 // ==========================================================================
 
-// Dedication dates and floor areas are real, sourced from Church Newsroom /
-// Church News almanac entries and Wikipedia for each temple.
+// The first 7 entries are the assignment's starter data (unchanged). The
+// remaining entries were added to reach 10+; their dedication dates and
+// floor areas are real, sourced from Church Newsroom / Church News almanac
+// entries and Wikipedia for each temple.
 const temples = [
+  {
+    templeName: "Aba Nigeria",
+    location: "Aba, Nigeria",
+    dedicated: "2005, August, 7",
+    area: 11500,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+  },
+  {
+    templeName: "Manti Utah",
+    location: "Manti, Utah, United States",
+    dedicated: "1888, May, 21",
+    area: 74792,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+  },
+  {
+    templeName: "Payson Utah",
+    location: "Payson, Utah, United States",
+    dedicated: "2015, June, 7",
+    area: 96630,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+  },
+  {
+    templeName: "Yigo Guam",
+    location: "Yigo, Guam",
+    dedicated: "2020, May, 2",
+    area: 6861,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+  },
+  {
+    templeName: "Washington D.C.",
+    location: "Kensington, Maryland, United States",
+    dedicated: "1974, November, 19",
+    area: 156558,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+  },
+  {
+    templeName: "Lima Perú",
+    location: "Lima, Perú",
+    dedicated: "1986, January, 10",
+    area: 9600,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+  },
+  {
+    templeName: "Mexico City Mexico",
+    location: "Mexico City, Mexico",
+    dedicated: "1983, December, 2",
+    area: 116642,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+  },
   {
     templeName: "Salt Lake",
     location: "Salt Lake City, Utah, United States",
     dedicated: "1893, April, 6",
     area: 253015,
     imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Salt_Lake_Temple,_Utah_-_Sept_2004.jpg?width=800"
-  },
-  {
-    templeName: "Kirtland",
-    location: "Kirtland, Ohio, United States",
-    dedicated: "1836, March, 27",
-    area: 15000,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Kirtland_Temple.jpg?width=800"
   },
   {
     templeName: "St. George Utah",
@@ -27,46 +71,11 @@ const temples = [
     imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/St._George_Temple.jpg?width=800"
   },
   {
-    templeName: "Logan Utah",
-    location: "Logan, Utah, United States",
-    dedicated: "1884, May, 17",
-    area: 119619,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Logan_Utah_Temple.jpg?width=800"
-  },
-  {
-    templeName: "Cardston Alberta",
-    location: "Cardston, Alberta, Canada",
-    dedicated: "1923, August, 26",
-    area: 88562,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Cardston_Alberta_Canada_Temple.jpg?width=800"
-  },
-  {
-    templeName: "Laie Hawaii",
-    location: "Laie, Hawaii, United States",
-    dedicated: "1919, November, 27",
-    area: 42100,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Laie_Hawaii_Temple,_Oahu,_Hawaii,_USA.jpg?width=800"
-  },
-  {
-    templeName: "São Paulo Brazil",
-    location: "São Paulo, Brazil",
-    dedicated: "1978, October, 30",
-    area: 55000,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Sao_Paulo_Brazil_Temple.jpg?width=800"
-  },
-  {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Mexico-city-mormon-temple-1441594497.jpg?width=800"
-  },
-  {
-    templeName: "Washington D.C.",
-    location: "Kensington, Maryland, United States",
-    dedicated: "1974, November, 19",
-    area: 156558,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Washington_DC_Temple.JPG?width=800"
+    templeName: "Kirtland",
+    location: "Kirtland, Ohio, United States",
+    dedicated: "1836, March, 27",
+    area: 15000,
+    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Kirtland_Temple.jpg?width=800"
   },
   {
     templeName: "Colonia Juárez Chihuahua Mexico",
@@ -76,32 +85,11 @@ const temples = [
     imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Colonial_Juarez_Temple.jpg?width=800"
   },
   {
-    templeName: "Taipei Taiwan",
-    location: "Taipei, Taiwan",
-    dedicated: "1984, November, 17",
-    area: 9945,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Taiwan_Temple-cropped.JPG?width=800"
-  },
-  {
-    templeName: "Paris France",
-    location: "Le Chesnay, France",
-    dedicated: "2017, May, 21",
-    area: 44175,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_mormon_de_Paris_au_Chesnay_le_8_avril_2017_-_11.jpg?width=800"
-  },
-  {
     templeName: "Rome Italy",
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
     area: 41010,
     imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/LDS_Rome_Temple.jpg?width=800"
-  },
-  {
-    templeName: "Provo City Center",
-    location: "Provo, Utah, United States",
-    dedicated: "2016, March, 20",
-    area: 85084,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Provo_City_Center_Temple_02.jpg?width=800"
   }
 ];
 
