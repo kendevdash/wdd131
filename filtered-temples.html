@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filtered Temple Album &ndash; WDD 131 &ndash; Ken Dash</title>
+  <meta name="description" content="A filterable WDD 131 temple picture album: browse by Home, Old, New, Large, and Small, with temple cards generated dynamically from a JavaScript data array.">
+  <meta name="author" content="Ken Dash">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <!-- Mobile-first: base styles first, larger-view overrides second -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="site-bar">
+      <span class="site-name">Temple Album</span>
+      <button id="menu-button" class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">&#9776;</button>
+    </div>
+    <nav>
+      <ul id="primary-nav" class="nav-list">
+        <li><a href="#" id="home" class="active" aria-current="page">Home</a></li>
+        <li><a href="#" id="old">Old</a></li>
+        <li><a href="#" id="new">New</a></li>
+        <li><a href="#" id="large">Large</a></li>
+        <li><a href="#" id="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Filtered Temple Album</h1>
+
+    <div class="gallery" id="temple-cards" aria-live="polite"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Ken Dash &bull; Utah, USA</p>
+    <p id="lastModified"></p>
+    <p class="credits">Temple photos courtesy of <a href="https://commons.wikimedia.org/wiki/Category:Temples_of_The_Church_of_Jesus_Christ_of_Latter-day_Saints">Wikimedia Commons</a> contributors.</p>
+  </footer>
+</body>
+</html>

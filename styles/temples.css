@@ -113,6 +113,12 @@ header {
   border-left-color: var(--accent);
 }
 
+/* Filtered Temple Album: marks which filter is currently applied */
+.nav-list a.active {
+  font-weight: 700;
+  border-left-color: var(--accent);
+}
+
 /* --------------------------------------------------------------------------
    Main – centered, limited width
    -------------------------------------------------------------------------- */
@@ -163,6 +169,22 @@ figcaption {
   color: var(--brand);
 }
 
+/* Filtered Temple Album: captions carry name + location + dedicated +
+   area, so the name gets its own heading and the detail lines are
+   de-emphasized rather than all four lines reading with equal weight. */
+figcaption h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  color: var(--brand);
+}
+
+figcaption p {
+  margin: 0.15rem 0;
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
 /* --------------------------------------------------------------------------
    Footer – matches the home page
    -------------------------------------------------------------------------- */
@@ -177,6 +199,15 @@ footer {
 footer p {
   margin: 0.25rem 0;
   font-size: 0.95rem;
+}
+
+.credits {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.credits a {
+  color: inherit;
 }
 
 /* --------------------------------------------------------------------------
