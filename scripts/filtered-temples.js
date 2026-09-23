@@ -61,35 +61,35 @@ const temples = [
     location: "Salt Lake City, Utah, United States",
     dedicated: "1893, April, 6",
     area: 253015,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Salt_Lake_Temple,_Utah_-_Sept_2004.jpg?width=800"
+    imageUrl: "images/salt-lake-temple.webp"
   },
   {
     templeName: "St. George Utah",
     location: "St. George, Utah, United States",
     dedicated: "1877, April, 6",
     area: 143969,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/St._George_Temple.jpg?width=800"
+    imageUrl: "images/st-george-temple.webp"
   },
   {
     templeName: "Kirtland",
     location: "Kirtland, Ohio, United States",
     dedicated: "1836, March, 27",
     area: 15000,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Kirtland_Temple.jpg?width=800"
+    imageUrl: "images/kirtland-temple.webp"
   },
   {
     templeName: "Colonia Juárez Chihuahua Mexico",
     location: "Colonia Juárez, Chihuahua, Mexico",
     dedicated: "1999, March, 6",
     area: 6800,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Colonial_Juarez_Temple.jpg?width=800"
+    imageUrl: "images/colonia-juarez-temple.webp"
   },
   {
     templeName: "Rome Italy",
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
     area: 41010,
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/LDS_Rome_Temple.jpg?width=800"
+    imageUrl: "images/rome-italy-temple.webp"
   }
 ];
 
