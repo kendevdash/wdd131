@@ -170,6 +170,12 @@ ol li {
   border-radius: 8px;
 }
 
+.swatch-primary { background-color: var(--primary); }
+.swatch-accent { background-color: var(--accent); }
+.swatch-bg { background-color: var(--bg); }
+.swatch-surface { background-color: var(--surface); }
+.swatch-ink { background-color: var(--ink); }
+
 .swatch-bordered {
   border: 1px solid var(--line);
 }
