@@ -20,7 +20,7 @@
   --space-5: 3rem;
 
   --radius: 10px;
-  --shadow: 0 2px 10px rgba(6, 47, 56, 0.10);
+  --shadow: 0 2px 10px #062f381a;
   --maxw: 700px;
 
   --font: "Poppins", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -81,7 +81,7 @@ nav a {
 
 nav a:hover,
 nav a:focus-visible {
-  background-color: rgba(255, 255, 255, 0.14);
+  background-color: #ffffff24;
   border-bottom-color: var(--surface);
 }
 
