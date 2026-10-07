@@ -104,7 +104,7 @@ function displayPlaces(placeList, targetSelector = "#places") {
   }
 
   if (placeList.length === 0) {
-    container.innerHTML = "<p>No places were found.</p>";
+    container.innerHTML = `<p>No places were found.</p>`;
     return;
   }
 
@@ -168,7 +168,7 @@ function showVisitMessage() {
   if (previousVisit) {
     message.textContent = `Welcome back! Your last visit was ${previousVisit}.`;
   } else {
-    message.textContent = "Welcome to Explore Ghana! This is your first visit.";
+    message.textContent = `Welcome to Explore Ghana! This is your first visit.`;
   }
 
   localStorage.setItem("lastVisit", new Date().toLocaleString());
