@@ -1,0 +1,304 @@
+/* =========================
+   COLOR PALETTE
+   TODO: these are neutral placeholders — choose your own palette.
+========================= */
+
+:root {
+  --color-primary: #006b3f;
+  --color-primary-dark: #004d2d;
+  --color-accent: #f4c430;
+  --color-text: #222222;
+  --color-background: #f7f7f7;
+  --color-surface: #ffffff;
+  --color-border: #dddddd;
+}
+
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+#menu-button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#navigation {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+#navigation.show {
+  display: flex;
+}
+
+#navigation a {
+  padding: 0.5rem;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.hero h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.hero .button,
+.hero a.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero .button:hover,
+.hero .button:focus {
+  background-color: var(--color-primary-dark);
+}
+
+/* =========================
+   PLACE CARDS
+========================= */
+
+#places,
+#featured-places {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  /* Reserves space before JS populates the grid, so the page doesn't
+     jump/shift once the cards are rendered in (avoids a CLS penalty). */
+  min-height: 60vh;
+}
+
+.place-card {
+  background-color: var(--color-surface);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.place-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: -1rem -1rem 1rem;
+  width: calc(100% + 2rem);
+}
+
+.place-card h2 {
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+/* =========================
+   FILTER
+========================= */
+
+.filters {
+  margin-bottom: 2rem;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.75rem;
+  margin-top: 0.35rem;
+  margin-bottom: 1rem;
+  border: 1px solid #777777;
+  border-radius: 5px;
+  font: inherit;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--color-accent);
+}
+
+/* =========================
+   FORM
+========================= */
+
+form {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--color-primary-dark);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+/* =========================
+   TABLET / DESKTOP
+========================= */
+
+@media screen and (min-width: 700px) {
+  #menu-button {
+    display: none;
+  }
+
+  header {
+    flex-wrap: nowrap;
+  }
+
+  #navigation {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  #places,
+  #featured-places {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .hero {
+    padding: 5rem 2rem;
+  }
+}
+
+/* =========================
+   LARGE SCREENS
+========================= */
+
+@media screen and (min-width: 1000px) {
+  #places,
+  #featured-places {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero h2 {
+    font-size: 3.5rem;
+  }
+}

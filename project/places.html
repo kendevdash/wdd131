@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Ghana | Places</title>
+    <meta name="description"
+          content="Explore destinations and attractions across Ghana.">
+    <meta name="author" content="Kenneth Ighogboja">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Explore Ghana</h1>
+
+    <button id="menu-button" aria-label="Open navigation">
+        ☰
+    </button>
+
+    <nav id="navigation">
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="contact.html">Contact</a>
+        <a href="references.html">References</a>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h2>Places to Explore</h2>
+
+        <p>
+            <!-- Write your own description here. -->
+        </p>
+
+        <label for="place-filter">Choose a category:</label>
+
+        <select id="place-filter">
+            <option value="all">All Places</option>
+            <option value="nature">Nature</option>
+            <option value="history">History</option>
+            <option value="culture">Culture</option>
+            <option value="wildlife">Wildlife</option>
+        </select>
+    </section>
+
+    <div id="places"></div>
+
+</main>
+
+<footer>
+    <p>&copy; <span id="current-year"></span> Explore Ghana</p>
+    <a href="references.html">References</a>
+</footer>
+
+</body>
+</html>

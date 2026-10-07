@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Ghana | Contact</title>
+    <meta name="description"
+          content="Contact Explore Ghana and share your interests about traveling in Ghana.">
+    <meta name="author" content="Kenneth Ighogboja">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Explore Ghana</h1>
+
+    <button id="menu-button" aria-label="Open navigation">
+        ☰
+    </button>
+
+    <nav id="navigation">
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="contact.html">Contact</a>
+        <a href="references.html">References</a>
+    </nav>
+</header>
+
+<main>
+
+    <h2>Contact Us</h2>
+
+    <form action="contact.html" method="get">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="interest">What interests you?</label>
+        <select id="interest" name="interest" required>
+            <option value="">Select an option</option>
+            <option value="nature">Nature</option>
+            <option value="history">History</option>
+            <option value="culture">Culture</option>
+            <option value="wildlife">Wildlife</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</main>
+
+<footer>
+    <p>&copy; <span id="current-year"></span> Explore Ghana</p>
+    <a href="references.html">References</a>
+</footer>
+
+</body>
+</html>
